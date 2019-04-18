@@ -2,7 +2,7 @@ FROM node:8
 
 MAINTAINER Christian Metz <christian@metzweb.net>
 
-ENV SWAGGER_UI_VERSION 3.2.2
+ENV SWAGGER_UI_VERSION 3.22.1
 ENV SWAGGER_SPEC_PATH /swaggerui/swagger/
 
 # Create app directories and install unzip
