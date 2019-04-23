@@ -5,7 +5,7 @@ This is a fork image of metz's swaggerui which supports openapi 3.0.
 [![Docker Build Status](https://img.shields.io/docker/build/metz/swaggerui.svg)](https://hub.docker.com/r/metz/swaggerui/)
 [![Docker Automated build](https://img.shields.io/docker/automated/metz/swaggerui.svg)](https://hub.docker.com/r/metz/swaggerui/)
 
-`metz/swaggerui` is a Docker image for the [Swagger UI](https://swagger.io/swagger-ui/), that supports publishing [Swagger Specs](https://swagger.io/specification/) via **API** and **volume mount**.
+`hajnalmt/swaggerui` is a Docker image for the [Swagger UI](https://swagger.io/swagger-ui/), that supports publishing [Swagger Specs](https://swagger.io/specification/) via **API** and **volume mount**.
 
 ## Getting started
 
@@ -59,7 +59,7 @@ Technology | Version
 Swagger UI | 3.22.1
 NodeJS     | 8
 
-> Swagger UI only supports the Swagger / OpenAPI specification `2.0` and 3.0 as of version `3.22.1`.
+> Swagger UI only supports the Swagger / OpenAPI specification `2.0` and `3.0` as of version `3.22.1`.
 
 ### Building
 
