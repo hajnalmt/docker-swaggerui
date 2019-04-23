@@ -1,5 +1,7 @@
 # Docker Swagger UI
 
+This is a fork image of metz's swaggerui which supports openapi 3.0.
+
 [![Docker Build Status](https://img.shields.io/docker/build/metz/swaggerui.svg)](https://hub.docker.com/r/metz/swaggerui/)
 [![Docker Automated build](https://img.shields.io/docker/automated/metz/swaggerui.svg)](https://hub.docker.com/r/metz/swaggerui/)
 
@@ -10,7 +12,7 @@
 You can pull and run a pre-built Docker image directly from [Dockerhub](https://hub.docker.com/r/metz/swaggerui/):
 
 ```sh
-docker run --name swaggerui -p 80:8080 metz/swaggerui
+docker run --name swaggerui -p 80:8080 hajnalmt/swaggerui
 ```
 
 This will start the Swagger UI using the default [petstore JSON](http://petstore.swagger.io/v2/swagger.json). Then you can access the Swagger UI directly from a browser:
@@ -41,7 +43,7 @@ curl -v -X POST \
 In order to publish the Swagger Spec via filesystem, mount the directory containing the `swagger.json` as a volume at `/swaggerui/swagger`:
 
 ```sh
-docker run --name swaggerui -p 80:8080 -v /path/to/spec:/swaggerui/swagger metz/swaggerui
+docker run --name swaggerui -p 80:8080 -v /path/to/spec:/swaggerui/swagger hajnalmt/swaggerui
 ```
 
 ##### Persistence
@@ -54,17 +56,17 @@ Mounting the volume also preserves the Swagger Spec across container shutdown an
 
 Technology | Version
 ---------- | -------
-Swagger UI | 3.2.2
+Swagger UI | 3.22.1
 NodeJS     | 8
 
-> Swagger UI only supports the Swagger / OpenAPI specification `2.0` as of version `3.x`.
+> Swagger UI only supports the Swagger / OpenAPI specification `2.0` and 3.0 as of version `3.22.1`.
 
 ### Building
 
 In order to build the container manually, execute the following in the checkout directory:
 
 ```sh
-docker build -t metz/swaggerui .
+docker build -t hajnalmt/swaggerui .
 ```
 
 ## API Reference
@@ -90,5 +92,5 @@ For more information about this image and the functionality it provides, please 
 
 ## Licensing
 
-A Project by Christian Metz.  
+A Project by Christian Metz.
 Released under the [MIT License](LICENSE).
